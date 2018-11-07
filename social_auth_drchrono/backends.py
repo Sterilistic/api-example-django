@@ -22,6 +22,7 @@ class drchronoOAuth2(BaseOAuth2):
         """
         Return user details from drchrono account
         """
+        
         return {'username': response.get('username'),}
 
     def user_data(self, access_token, *args, **kwargs):

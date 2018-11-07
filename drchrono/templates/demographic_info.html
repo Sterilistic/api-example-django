@@ -1,0 +1,33 @@
+{% extends 'checkin.html' %}
+{% block content %}
+
+		<div style="text-align: center">
+			<h3 style="color: #00a800;">Welcome to Dr. {{ user }}'s Clinic</h3>
+			<br>
+			<h6>Would you like to update any of your information?</h6>
+			<hr>
+
+		</div>
+
+
+		<form style="margin: 20px;" class="form-horizontal" id='update_demographics_form' action="{% url 'update_demographics_info' %}" method="post">
+		    {% csrf_token %}
+
+		    {% for field in demographics_form.visible_fields %}
+		    	<strong style="color:#b30505">{{ field.errors.as_text }}</strong>
+			    <div class="form-group row " style="margin-bottom: 0px!important">
+            <div class=" col-sm-3" style="padding-top: 22px;">
+			        {{ field.label_tag }}
+            </div>
+            <div class="col-sm-9">
+			        {{ field }}
+            </div>
+			    </div>
+			{% endfor %}
+			{% for field in demographics_form.hidden_fields %}
+				{{ field }}
+			{% endfor %}
+
+			<button style="width: 150px;" type="submit" class="btn btn-success">Check In</button>
+		</form>
+{% endblock content %}

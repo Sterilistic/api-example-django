@@ -119,7 +119,7 @@ STATIC_URL = '/static/'
 # 4) copy your CLIENT_ID and SECRET keys into a file docker/environment. See the example
 # 5) Ask a dev if this doesn't work quickly; these settings can be fiddly, and we'd rather not wast time with them.
 SOCIAL_AUTH_DRCHRONO_KEY = os.getenv('SOCIAL_AUTH_CLIENT_ID')
-SOCIAL_AUTH_DRCHRONO_SECRET = os.getenv('SOCIAL_AUTH_SECRET')
+SOCIAL_AUTH_DRCHRONO_SECRET =  os.getenv('SOCIAL_AUTH_SECRET')
 
 
 LOGIN_REDIRECT_URL = '/welcome/'

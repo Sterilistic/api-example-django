@@ -1,0 +1,16 @@
+{% extends 'checkin.html' %}
+{% block content %}
+
+<div style="text-align: center;">
+	<h3 style="color: #6d6d6d;font-weight: bold;">Your token number is {{ token_number }} </h3>
+	<br>
+	<br>
+	<h6>Thank you for visitng us!</h6>
+	
+	<!-- <h5>Dr. {{ user }} will call you in shortly.</h5> -->
+	<hr>
+</div>
+<button style="margin-bottom:  15px;" type='button' onclick="location.href='{% url 'checkin_patient_portal' %}'" class="btn btn-success">Done</button>
+
+		
+{% endblock content %}
