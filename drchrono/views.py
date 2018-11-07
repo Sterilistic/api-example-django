@@ -24,6 +24,9 @@ from django.db.models import Q
 from django.http import JsonResponse
 
 def autocomplete(request):
+    '''
+    Autocomplete service for First Name & Last Name of the user for user's ease
+    '''
     q_type = request.GET.get('type', None)
     if request.is_ajax():
         if q_type == 'first_name':
